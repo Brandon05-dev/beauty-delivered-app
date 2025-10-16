@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glamongo - Color Palette Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #FFF9F7 0%, #FADADD 100%);
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      padding: 60px;
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(250, 218, 221, 0.4);
+    }
+    
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      text-align: center;
+      color: #2B2B2B;
+      margin-bottom: 16px;
+    }
+    
+    .accent-line {
+      width: 120px;
+      height: 4px;
+      background: linear-gradient(to right, #FADADD, #E6B2A6, #F6E2B3);
+      margin: 0 auto 40px;
+      border-radius: 2px;
+    }
+    
+    .subtitle {
+      text-align: center;
+      color: #2B2B2B;
+      opacity: 0.7;
+      font-size: 18px;
+      margin-bottom: 60px;
+    }
+    
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+    
+    .color-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(43, 43, 43, 0.08);
+      transition: all 0.3s ease;
+    }
+    
+    .color-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 48px rgba(250, 218, 221, 0.3);
+    }
+    
+    .color-swatch {
+      width: 100%;
+      height: 160px;
+    }
+    
+    .color-info {
+      padding: 20px;
+    }
+    
+    .color-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #2B2B2B;
+      margin-bottom: 8px;
+    }
+    
+    .color-hex {
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      color: #E6B2A6;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    
+    .color-usage {
+      font-size: 13px;
+      color: #2B2B2B;
+      opacity: 0.6;
+      line-height: 1.6;
+    }
+    
+    .examples {
+      margin-top: 40px;
+    }
+    
+    .example-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #2B2B2B;
+      margin-bottom: 24px;
+    }
+    
+    .button-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    
+    .btn {
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary {
+      background: #FADADD;
+      color: #2B2B2B;
+      box-shadow: 0 4px 20px rgba(250, 218, 221, 0.3);
+    }
+    
+    .btn-primary:hover {
+      background: #F6E2B3;
+      transform: scale(1.05);
+      box-shadow: 0 8px 32px rgba(250, 218, 221, 0.4);
+    }
+    
+    .btn-secondary {
+      background: #E6B2A6;
+      color: #2B2B2B;
+      box-shadow: 0 4px 20px rgba(230, 178, 166, 0.3);
+    }
+    
+    .btn-secondary:hover {
+      background: #F6E2B3;
+      box-shadow: 0 8px 32px rgba(43, 43, 43, 0.08);
+    }
+    
+    .btn-outline {
+      background: transparent;
+      color: #2B2B2B;
+      border: 2px solid #FADADD;
+    }
+    
+    .btn-outline:hover {
+      background: #FADADD;
+      box-shadow: 0 4px 20px rgba(250, 218, 221, 0.3);
+    }
+    
+    .card-example {
+      background: linear-gradient(to bottom right, #FADADD20, #F6E2B320);
+      border: 2px solid #FADADD66;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      transition: all 0.3s ease;
+    }
+    
+    .card-example:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 40px rgba(250, 218, 221, 0.4);
+    }
+    
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: #2B2B2B;
+      margin-bottom: 12px;
+    }
+    
+    .card-text {
+      color: #2B2B2B;
+      opacity: 0.7;
+      line-height: 1.6;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px 20px;
+      }
+      
+      h1 {
+        font-size: 32px;
+      }
+      
+      .palette-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Glamongo Color Palette</h1>
+    <div class="accent-line"></div>
+    <p class="subtitle">Blush & Gold Elegance — Inspired by Dior Beauty & Fenty Skin</p>
+    
+    <div class="palette-grid">
+      <div class="color-card">
+        <div class="color-swatch" style="background: #FADADD;"></div>
+        <div class="color-info">
+          <div class="color-name">Blush Pink</div>
+          <div class="color-hex">#FADADD</div>
+          <div class="color-usage">Primary color for buttons, backgrounds, and key UI elements. Represents femininity and softness.</div>
+        </div>
+      </div>
+      
+      <div class="color-card">
+        <div class="color-swatch" style="background: #E6B2A6;"></div>
+        <div class="color-info">
+          <div class="color-name">Rose Gold</div>
+          <div class="color-hex">#E6B2A6</div>
+          <div class="color-usage">Accent color for highlights, hover states, and decorative elements. Adds warmth and luxury.</div>
+        </div>
+      </div>
+      
+      <div class="color-card">
+        <div class="color-swatch" style="background: #2B2B2B;"></div>
+        <div class="color-info">
+          <div class="color-name">Charcoal Gray</div>
+          <div class="color-hex">#2B2B2B</div>
+          <div class="color-usage">Primary text color and contrast element. Ensures readability and professional appearance.</div>
+        </div>
+      </div>
+      
+      <div class="color-card">
+        <div class="color-swatch" style="background: #FFF9F7; border: 1px solid #FADADD;"></div>
+        <div class="color-info">
+          <div class="color-name">Ivory White</div>
+          <div class="color-hex">#FFF9F7</div>
+          <div class="color-usage">Soft background color. Creates a warm, elegant base that's easier on the eyes than pure white.</div>
+        </div>
+      </div>
+      
+      <div class="color-card">
+        <div class="color-swatch" style="background: #F6E2B3;"></div>
+        <div class="color-info">
+          <div class="color-name">Champagne</div>
+          <div class="color-hex">#F6E2B3</div>
+          <div class="color-usage">Highlight color for hover states and special elements. Adds a touch of celebration and luxury.</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="examples">
+      <h2 class="example-title">Button Examples</h2>
+      <div class="button-grid">
+        <button class="btn btn-primary">Primary Button</button>
+        <button class="btn btn-secondary">Secondary Button</button>
+        <button class="btn btn-outline">Outline Button</button>
+      </div>
+      
+      <h2 class="example-title">Card Example</h2>
+      <div class="card-example">
+        <h3 class="card-title">Elegant Beauty Services</h3>
+        <p class="card-text">
+          Experience luxury beauty booking with our sophisticated platform. 
+          From everyday makeup to bridal glam, we bring professional services 
+          to your doorstep with elegance and style.
+        </p>
+      </div>
+      
+      <h2 class="example-title">Typography</h2>
+      <div style="margin-bottom: 24px;">
+        <h3 style="font-family: 'Playfair Display', serif; font-size: 32px; color: #2B2B2B; margin-bottom: 12px;">
+          Playfair Display for Headings
+        </h3>
+        <p style="color: #2B2B2B; opacity: 0.7; line-height: 1.6;">
+          Poppins is used for body text to maintain readability while keeping 
+          the elegant and modern aesthetic. The combination creates a perfect 
+          balance between sophistication and accessibility.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

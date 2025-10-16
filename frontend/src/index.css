@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Glamongo - Blush & Gold Elegance Theme
+   Primary (blush pink): #FADADD
+   Accent (rose gold): #E6B2A6
+   Contrast (charcoal gray): #2B2B2B
+   Soft Base (ivory white): #FFF9F7
+   Highlight (champagne): #F6E2B3
+*/
+
+@layer base {
+  :root {
+    /* Glamongo Color System - HSL Format */
+    --background: 10 100% 98.4%;    /* #FFF9F7 - Ivory White */
+    --foreground: 0 0% 16.9%;       /* #2B2B2B - Charcoal Gray */
+
+    --card: 10 100% 98.4%;
+    --card-foreground: 0 0% 16.9%;
+
+    --popover: 10 100% 98.4%;
+    --popover-foreground: 0 0% 16.9%;
+
+    /* Blush Pink Primary */
+    --primary: 350 100% 92.4%;      /* #FADADD - Blush Pink */
+    --primary-foreground: 0 0% 16.9%;
+
+    /* Rose Gold Accent */
+    --secondary: 18 52% 78%;        /* #E6B2A6 - Rose Gold */
+    --secondary-foreground: 0 0% 16.9%;
+
+    /* Soft Backgrounds */
+    --muted: 10 100% 98.4%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Champagne Highlights */
+    --accent: 45 82% 83%;           /* #F6E2B3 - Champagne */
+    --accent-foreground: 0 0% 16.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 350 100% 92.4%;       /* Soft blush border */
+    --input: 350 40% 90%;
+    --ring: 45 82% 83%;             /* Champagne ring */
+
+    --radius: 0.75rem;
+    
+    /* Custom Glamongo Variables */
+    --glamongo-blush: #FADADD;
+    --glamongo-rose: #E6B2A6;
+    --glamongo-charcoal: #2B2B2B;
+    --glamongo-ivory: #FFF9F7;
+    --glamongo-champagne: #F6E2B3;
+    
+    /* Elegant Shadows */
+    --shadow-rose: 0 4px 20px rgba(250, 218, 221, 0.3);
+    --shadow-rose-lg: 0 10px 40px rgba(250, 218, 221, 0.4);
+    --shadow-elegant: 0 8px 32px rgba(43, 43, 43, 0.08);
+    --shadow-glow: 0 0 20px rgba(246, 226, 179, 0.5);
+    
+    /* Smooth Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 10 100% 98.4%;
+    --sidebar-foreground: 0 0% 16.9%;
+    --sidebar-primary: 0 0% 16.9%;
+    --sidebar-primary-foreground: 10 100% 98.4%;
+    --sidebar-accent: 350 100% 92.4%;
+    --sidebar-accent-foreground: 0 0% 16.9%;
+    --sidebar-border: 350 40% 90%;
+    --sidebar-ring: 45 82% 83%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins antialiased;
+    background-color: var(--glamongo-ivory);
+    color: var(--glamongo-charcoal);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+    color: var(--glamongo-charcoal);
+  }
+}
+
+@layer components {
+  /* Glamongo Button Styles */
+  .btn-glamongo {
+    @apply bg-glamongo-blush text-glamongo-charcoal font-medium px-8 py-3 rounded-lg;
+    @apply transition-all duration-300 ease-in-out;
+    @apply shadow-rose hover:shadow-rose-lg;
+    @apply hover:bg-glamongo-champagne hover:scale-105;
+  }
+
+  .btn-glamongo-secondary {
+    @apply bg-glamongo-rose text-glamongo-charcoal font-medium px-8 py-3 rounded-lg;
+    @apply transition-all duration-300 ease-in-out;
+    @apply shadow-rose hover:shadow-elegant;
+    @apply hover:bg-glamongo-champagne;
+  }
+
+  .btn-glamongo-outline {
+    @apply border-2 border-glamongo-blush text-glamongo-charcoal font-medium px-8 py-3 rounded-lg;
+    @apply transition-all duration-300 ease-in-out;
+    @apply hover:bg-glamongo-blush hover:shadow-rose;
+  }
+
+  /* Glamongo Card Styles */
+  .card-glamongo {
+    @apply bg-white rounded-2xl p-6 shadow-elegant;
+    @apply transition-all duration-300 ease-in-out;
+    @apply hover:shadow-rose-lg hover:scale-[1.02];
+  }
+
+  /* Glamongo Section */
+  .section-glamongo {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+
+  /* Glamongo Heading */
+  .heading-glamongo {
+    @apply font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-glamongo-charcoal mb-4;
+    @apply animate-fade-in;
+  }
+
+  .subheading-glamongo {
+    @apply font-playfair text-2xl md:text-3xl lg:text-4xl font-semibold text-glamongo-charcoal mb-3;
+  }
+
+  /* Glamongo Text */
+  .text-glamongo {
+    @apply font-poppins text-base md:text-lg text-glamongo-charcoal/80;
+  }
+
+  /* Glamongo Accent Line */
+  .accent-line {
+    @apply w-24 h-1 bg-gradient-to-r from-glamongo-blush via-glamongo-rose to-glamongo-champagne rounded-full;
+  }
+}
