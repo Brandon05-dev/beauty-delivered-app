@@ -140,6 +140,7 @@
   .heading-glamongo {
     @apply font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-glamongo-charcoal mb-4;
     @apply animate-fade-in;
+    text-shadow: 2px 2px 4px rgba(26, 26, 46, 0.1);
   }
 
   .subheading-glamongo {

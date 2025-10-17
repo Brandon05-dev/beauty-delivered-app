@@ -24,9 +24,12 @@ const Hero = () => {
           </div>
 
           {/* Subheading */}
-          <p className="text-lg md:text-xl text-glamongo-charcoal/70 max-w-2xl mx-auto leading-relaxed font-poppins">
-            Elevate your beauty routine with our sophisticated booking platform. 
-            Professional services, elegant experience, effortless appointments.
+          <p className="text-lg md:text-xl text-glamongo-charcoal/80 max-w-2xl mx-auto leading-relaxed font-poppins italic">
+            Elevate your beauty routine with our sophisticated booking platform.
+            <br />
+            <span className="font-semibold text-glamongo-purple">Professional services</span>, 
+            <span className="font-semibold text-glamongo-rose"> elegant experience</span>, 
+            effortless appointments.
           </p>
 
           {/* CTA Buttons */}
