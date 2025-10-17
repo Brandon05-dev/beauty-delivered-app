@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Sparkles, Clock, DollarSign } from "lucide-react";
+import { Sparkles, Clock, DollarSign, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
@@ -36,12 +36,8 @@ const ServicesPreview = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-6 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-glamongo-purple/10 border-2 border-glamongo-purple/40 shadow-purple">
-            <Sparkles className="w-4 h-4 text-glamongo-purple" />
-            <span className="text-sm font-semibold text-glamongo-charcoal">Our Services</span>
-          </div>
           <h2 className="subheading-glamongo">
-            Beauty Services <span className="text-glamongo-rose">Tailored for You</span>
+            Our <span className="text-glamongo-purple">Services</span>
           </h2>
           <div className="flex justify-center">
             <div className="accent-line" />
@@ -90,8 +86,9 @@ const ServicesPreview = () => {
         {/* CTA */}
         <div className="text-center">
           <Link to="/services">
-            <button className="btn-glamongo">
+            <button className="btn-glamongo-outline group inline-flex items-center gap-2">
               View All Services
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </Link>
         </div>
