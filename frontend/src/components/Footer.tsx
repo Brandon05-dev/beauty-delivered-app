@@ -34,6 +34,12 @@ const Footer = () => {
                 Home
               </Link>
               <Link 
+                to="/about" 
+                className="text-white/80 hover:text-glamongo-blush transition-colors font-poppins hover:translate-x-2 transform duration-200"
+              >
+                About Us
+              </Link>
+              <Link 
                 to="/services" 
                 className="text-white/80 hover:text-glamongo-purple transition-colors font-poppins hover:translate-x-2 transform duration-200"
               >
@@ -44,6 +50,12 @@ const Footer = () => {
                 className="text-white/80 hover:text-glamongo-mint transition-colors font-poppins hover:translate-x-2 transform duration-200"
               >
                 Book Now
+              </Link>
+              <Link 
+                to="/contact" 
+                className="text-white/80 hover:text-glamongo-purple transition-colors font-poppins hover:translate-x-2 transform duration-200"
+              >
+                Contact
               </Link>
             </nav>
           </div>
