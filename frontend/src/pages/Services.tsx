@@ -118,12 +118,10 @@ const Services = () => {
             {services.map((service, index) => (
               <div 
                 key={service.id}
-                className={`overflow-hidden rounded-2xl shadow-elegant hover:shadow-rose-lg transition-all duration-300 bg-white border-2 border-glamongo-blush/30 ${
-                  index % 2 === 0 ? "md:mr-8" : "md:ml-8"
-                } animate-fade-in`}
+                className={`overflow-hidden rounded-2xl shadow-elegant hover:shadow-rose-lg transition-all duration-300 bg-white border-2 border-glamongo-blush/30 animate-fade-in`}
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="md:flex">
+                <div className={`md:flex ${index % 2 !== 0 ? "md:flex-row-reverse" : ""}`}>
                   {/* Image */}
                   <div className="md:w-2/5 aspect-[4/3] md:aspect-auto bg-glamongo-blush/40 flex items-center justify-center overflow-hidden">
                     <img 
