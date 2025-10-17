@@ -36,6 +36,20 @@ const Navbar = () => {
               Services
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-glamongo-purple group-hover:w-full transition-all duration-300"></span>
             </Link>
+            <Link 
+              to="/about" 
+              className="text-glamongo-charcoal hover:text-glamongo-rose transition-colors font-poppins font-semibold relative group"
+            >
+              About
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-glamongo-purple group-hover:w-full transition-all duration-300"></span>
+            </Link>
+            <Link 
+              to="/contact" 
+              className="text-glamongo-charcoal hover:text-glamongo-rose transition-colors font-poppins font-semibold relative group"
+            >
+              Contact
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-glamongo-purple group-hover:w-full transition-all duration-300"></span>
+            </Link>
             <Link to="/booking">
               <button className="btn-glamongo">Book Now</button>
             </Link>
@@ -67,6 +81,20 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Services
+            </Link>
+            <Link 
+              to="/about" 
+              className="block text-glamongo-charcoal hover:text-glamongo-rose transition-colors font-poppins font-semibold px-2 py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About
+            </Link>
+            <Link 
+              to="/contact" 
+              className="block text-glamongo-charcoal hover:text-glamongo-rose transition-colors font-poppins font-semibold px-2 py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
             </Link>
             <Link to="/booking" onClick={() => setIsMenuOpen(false)}>
               <button className="btn-glamongo w-full">Book Now</button>

@@ -1,5 +1,16 @@
-import { Button } from "@/components/ui/button";
 import { Instagram } from "lucide-react";
+
+const galleryImages = [
+  "/images/gallery/gallery-1.png",
+  "/images/gallery/gallery-2.png",
+  "/images/gallery/gallery-3.png",
+  "/images/gallery/gallery-4.png",
+  "/images/gallery/gallery-5.png",
+  "/images/gallery/gallery-6.png",
+  "/images/gallery/gallery-7.png",
+  "/images/gallery/gallery-8.png",
+  "/images/gallery/gallery-9.png",
+];
 
 const Gallery = () => {
   return (
@@ -19,19 +30,14 @@ const Gallery = () => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto mb-12">
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto mb-12">
+          {galleryImages.map((src, index) => (
             <div
-              key={item}
-              className="aspect-square rounded-2xl bg-glamongo-blush/40 hover:scale-105 hover:shadow-rose-lg transition-all duration-300 cursor-pointer overflow-hidden group relative animate-fade-in border-2 border-glamongo-purple/20"
+              key={index}
+              className="aspect-square rounded-2xl bg-glamongo-blush/40 hover:scale-105 hover:shadow-rose-lg transition-all duration-300 cursor-pointer overflow-hidden animate-fade-in border-2 border-glamongo-purple/20"
               style={{ animationDelay: `${index * 80}ms` }}
             >
-              <div className="absolute inset-0 bg-glamongo-charcoal/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="w-12 h-12 rounded-full bg-glamongo-purple flex items-center justify-center shadow-purple">
-                  <span className="text-white text-xl">✨</span>
-                </div>
-              </div>
+              <img src={src} alt={`Gallery image ${index + 1}`} className="w-full h-full object-cover" />
             </div>
           ))}
         </div>

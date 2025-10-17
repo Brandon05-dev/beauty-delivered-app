@@ -9,7 +9,7 @@ const services = [
     name: "Everyday Makeup",
     description: "Natural, flawless looks perfect for any day",
     duration: "60 min",
-    price: "From $80",
+    price: "From KES 1,400",
     image: "/images/services/makeup.png",
   },
   {
@@ -17,7 +17,7 @@ const services = [
     name: "Nail Services",
     description: "Manicures, pedicures, and nail art",
     duration: "45-90 min",
-    price: "From $50",
+    price: "From KES 1,500",
     image: "/images/services/nails.png",
   },
   {
@@ -25,8 +25,16 @@ const services = [
     name: "Bridal Glam",
     description: "Your perfect wedding day look",
     duration: "2-3 hours",
-    price: "From $250",
+    price: "From KES 15,000",
     image: "/images/services/bridal glam.png",
+  },
+  {
+    id: 4,
+    name: "Barbershop",
+    description: "Classic cuts and modern styles for men",
+    duration: "30-60 min",
+    price: "From KES 700",
+    image: "/images/services/barbershop.png",
   },
 ];
 
@@ -48,7 +56,7 @@ const ServicesPreview = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-12">
           {services.map((service, index) => (
             <div 
               key={service.id} 
@@ -74,7 +82,6 @@ const ServicesPreview = () => {
                     <span className="font-poppins">{service.duration}</span>
                   </div>
                   <div className="flex items-center gap-2 font-semibold text-glamongo-rose">
-                    <DollarSign className="w-4 h-4 text-glamongo-rose" />
                     <span className="font-poppins">{service.price}</span>
                   </div>
                 </div>

@@ -34,6 +34,7 @@ export default {
           mint: '#00D9C0',        // Fresh mint/teal
           lavender: '#C77DFF',    // Soft lavender
           sunset: '#FF5E78',      // Sunset pink
+          whatsapp: '#25D366',    // WhatsApp green
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
