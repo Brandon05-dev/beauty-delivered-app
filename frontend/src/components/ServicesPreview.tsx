@@ -32,7 +32,7 @@ const services = [
 
 const ServicesPreview = () => {
   return (
-    <section className="section-glamongo bg-gradient-to-b from-white to-glamongo-ivory/50">
+    <section className="section-glamongo bg-glamongo-ivory/50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-6 animate-fade-in">
@@ -59,8 +59,8 @@ const ServicesPreview = () => {
               className="card-glamongo group"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="aspect-[4/3] bg-gradient-to-br from-glamongo-blush/40 via-glamongo-rose/20 to-glamongo-champagne/30 relative overflow-hidden rounded-xl mb-4">
-                <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent" />
+              <div className="aspect-[4/3] bg-glamongo-blush/40 relative overflow-hidden rounded-xl mb-4">
+                <div className="absolute inset-0 bg-white/40" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-20 h-20 rounded-full bg-white/80 flex items-center justify-center shadow-rose">
                     <Sparkles className="w-10 h-10 text-glamongo-rose" />

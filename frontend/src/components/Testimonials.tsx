@@ -47,7 +47,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={testimonial.id}
-              className="bg-gradient-to-br from-glamongo-blush/20 to-glamongo-champagne/20 border-2 border-glamongo-blush/40 rounded-2xl p-8 hover:shadow-rose-lg hover:scale-[1.02] transition-all duration-300"
+              className="bg-glamongo-blush/20 border-2 border-glamongo-blush/40 rounded-2xl p-8 hover:shadow-rose-lg hover:scale-[1.02] transition-all duration-300"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="space-y-4">

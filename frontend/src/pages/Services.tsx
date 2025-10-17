@@ -75,7 +75,7 @@ const Services = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-glamongo-ivory via-glamongo-blush/20 to-glamongo-champagne/30">
+      <section className="relative py-20 bg-glamongo-ivory/50">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-6 animate-fade-in">
             <h1 className="heading-glamongo">
@@ -98,14 +98,14 @@ const Services = () => {
             {services.map((service, index) => (
               <div 
                 key={service.id}
-                className={`overflow-hidden rounded-2xl shadow-elegant hover:shadow-rose-lg transition-all duration-300 bg-gradient-to-br from-white to-glamongo-ivory/30 border-2 border-glamongo-blush/30 ${
+                className={`overflow-hidden rounded-2xl shadow-elegant hover:shadow-rose-lg transition-all duration-300 bg-white border-2 border-glamongo-blush/30 ${
                   index % 2 === 0 ? "md:mr-8" : "md:ml-8"
                 } animate-fade-in`}
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="md:flex">
                   {/* Image */}
-                  <div className="md:w-2/5 aspect-[4/3] md:aspect-auto bg-gradient-to-br from-glamongo-blush/60 via-glamongo-rose/40 to-glamongo-champagne/60 flex items-center justify-center">
+                  <div className="md:w-2/5 aspect-[4/3] md:aspect-auto bg-glamongo-blush/40 flex items-center justify-center">
                     <div className="w-24 h-24 rounded-full bg-white/90 flex items-center justify-center shadow-rose">
                       <span className="text-4xl">✨</span>
                     </div>

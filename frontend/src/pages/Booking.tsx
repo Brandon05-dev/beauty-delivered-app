@@ -96,7 +96,7 @@ const Booking = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative py-16 bg-gradient-to-br from-glamongo-ivory via-glamongo-blush/20 to-glamongo-champagne/30">
+      <section className="relative py-16 bg-glamongo-ivory/50">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-6 animate-fade-in">
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/80 border-2 border-glamongo-rose/40 backdrop-blur-sm shadow-rose">
@@ -119,8 +119,8 @@ const Booking = () => {
       {/* Booking Form */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto bg-gradient-to-br from-white to-glamongo-ivory/30 rounded-2xl shadow-elegant border-2 border-glamongo-blush/30 overflow-hidden">
-            <div className="bg-gradient-to-r from-glamongo-blush/20 to-glamongo-champagne/20 p-8 border-b-2 border-glamongo-blush/30">
+          <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-elegant border-2 border-glamongo-blush/30 overflow-hidden">
+            <div className="bg-glamongo-blush/20 p-8 border-b-2 border-glamongo-blush/30">
               <h2 className="text-3xl font-playfair font-bold text-glamongo-charcoal">Booking Details</h2>
               <p className="text-glamongo-charcoal/70 font-poppins mt-2">Fill in your details to reserve your appointment</p>
             </div>

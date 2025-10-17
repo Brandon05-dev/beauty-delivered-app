@@ -180,7 +180,7 @@ const AdminDashboard: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-glamongo-ivory to-glamongo-blush/10">
+    <div className="min-h-screen bg-glamongo-ivory/50">
       {/* Header */}
       <header className="bg-white border-b-2 border-glamongo-blush/30 shadow-rose sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">

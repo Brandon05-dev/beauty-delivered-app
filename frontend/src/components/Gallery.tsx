@@ -3,7 +3,7 @@ import { Instagram } from "lucide-react";
 
 const Gallery = () => {
   return (
-    <section className="section-glamongo bg-gradient-to-b from-glamongo-ivory/50 to-white">
+    <section className="section-glamongo bg-glamongo-ivory/50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-6 animate-fade-in">
@@ -23,10 +23,10 @@ const Gallery = () => {
           {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
             <div
               key={item}
-              className="aspect-square rounded-2xl bg-gradient-to-br from-glamongo-blush/60 via-glamongo-rose/30 to-glamongo-champagne/40 hover:scale-105 hover:shadow-rose-lg transition-all duration-300 cursor-pointer overflow-hidden group relative animate-fade-in"
+              className="aspect-square rounded-2xl bg-glamongo-blush/40 hover:scale-105 hover:shadow-rose-lg transition-all duration-300 cursor-pointer overflow-hidden group relative animate-fade-in"
               style={{ animationDelay: `${index * 80}ms` }}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-glamongo-charcoal/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-glamongo-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center shadow-rose">
                   <span className="text-glamongo-rose text-xl">✨</span>

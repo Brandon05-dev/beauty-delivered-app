@@ -4,14 +4,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-glamongo-ivory via-glamongo-blush/20 to-glamongo-champagne/30">
-      {/* Decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-glamongo-rose/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-glamongo-champagne/30 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-glamongo-blush/10 rounded-full blur-3xl" />
-      </div>
-
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-glamongo-ivory">
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
           {/* Badge */}
@@ -22,7 +15,7 @@ const Hero = () => {
 
           {/* Main Heading */}
           <h1 className="heading-glamongo">
-            <span className="bg-gradient-to-r from-glamongo-charcoal via-glamongo-rose to-glamongo-charcoal bg-clip-text text-transparent">
+            <span className="text-glamongo-charcoal">
               Experience
             </span>
             <br />

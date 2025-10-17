@@ -30,7 +30,7 @@ const AdminLogin: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-glamongo-ivory via-glamongo-blush/20 to-glamongo-champagne/30 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-glamongo-ivory/50 px-4">
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-glamongo-rose/20 rounded-full blur-3xl animate-pulse" />
