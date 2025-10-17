@@ -169,12 +169,6 @@ const Services = () => {
                         <p className="font-semibold text-glamongo-charcoal font-poppins">{service.duration}</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <p className="font-semibold text-glamongo-rose font-poppins">KES</p>
-                      <div>
-                        <p className="font-semibold text-glamongo-rose font-poppins">{service.price}</p>
-                      </div>
-                    </div>
                   </div>
 
                   {/* Includes */}
@@ -188,6 +182,16 @@ const Services = () => {
                         </li>
                       ))}
                     </ul>
+                  </div>
+
+                  {/* Price */}
+                  <div className="py-3 text-sm">
+                    <div className="flex items-center gap-2">
+                      <DollarSign className="w-4 h-4 text-glamongo-rose" />
+                      <div>
+                        <p className="font-semibold text-glamongo-rose font-poppins">{service.price}</p>
+                      </div>
+                    </div>
                   </div>
 
                   {/* CTA */}

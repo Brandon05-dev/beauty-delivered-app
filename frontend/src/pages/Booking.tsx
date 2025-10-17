@@ -12,10 +12,12 @@ import { Calendar as CalendarIcon, Clock, MapPin } from "lucide-react";
 import { bookingAPI } from "@/services/api";
 
 const services = [
-  { value: "Everyday Makeup", label: "Everyday Makeup - KES 10,400", duration: "60 min" },
-  { value: "Nail Services", label: "Nail Services - From KES 6,500", duration: "45-90 min" },
-  { value: "Bridal Glam", label: "Bridal Glam - From KES 32,500", duration: "2-3 hours" },
-  { value: "Special Occasion", label: "Special Occasion - KES 15,600", duration: "75-90 min" },
+  { value: "Everyday Makeup", label: "Everyday Makeup" },
+  { value: "Nail Services", label: "Nail Services" },
+  { value: "Bridal Glam", label: "Bridal Glam" },
+  { value: "Special Occasion", label: "Special Occasion" },
+  { value: "Hair Services", label: "Hair Services" },
+  { value: "Barbershop Services", label: "Barbershop Services" },
 ];
 
 const timeSlots = [
@@ -139,14 +141,14 @@ const Booking = () => {
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => handleInputChange("phone", e.target.value)}
-                        placeholder="+1 (555) 000-0000"
+                        placeholder="+254 700 000 000"
                         required
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email Address</Label>
+                    <Label htmlFor="email">Email Address (Optional)</Label>
                     <Input
                       id="email"
                       type="email"
