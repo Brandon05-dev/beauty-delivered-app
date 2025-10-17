@@ -4,22 +4,24 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-glamongo-ivory">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-white">
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/80 border-2 border-glamongo-rose/40 backdrop-blur-sm shadow-rose">
-            <Sparkles className="w-4 h-4 text-glamongo-rose" />
-            <span className="text-sm font-medium text-glamongo-charcoal">Luxury Beauty Booking</span>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border-2 border-glamongo-purple backdrop-blur-sm shadow-purple">
+            <Sparkles className="w-4 h-4 text-glamongo-purple animate-pulse-glow" />
+            <span className="text-sm font-semibold text-glamongo-charcoal">Luxury Beauty Booking</span>
           </div>
 
           {/* Main Heading */}
           <h1 className="heading-glamongo">
-            <span className="text-glamongo-charcoal">
+            <span className="text-glamongo-blush">
               Experience
             </span>
             <br />
-            <span className="text-glamongo-rose">Glamongo</span>
+            <span className="text-glamongo-purple">
+              Glamongo
+            </span>
           </h1>
 
           {/* Accent Line */}
@@ -49,18 +51,18 @@ const Hero = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-wrap items-center justify-center gap-8 pt-8 text-sm text-glamongo-charcoal/60">
+          <div className="flex flex-wrap items-center justify-center gap-8 pt-8 text-sm text-glamongo-charcoal/70">
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-glamongo-rose" />
-              <span>Premium Service</span>
+              <div className="w-2 h-2 rounded-full bg-glamongo-blush shadow-rose" />
+              <span className="font-medium">Premium Service</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-glamongo-rose" />
-              <span>Expert Artists</span>
+              <div className="w-2 h-2 rounded-full bg-glamongo-purple shadow-purple" />
+              <span className="font-medium">Expert Artists</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-glamongo-rose" />
-              <span>Flexible Booking</span>
+              <div className="w-2 h-2 rounded-full bg-glamongo-mint shadow-neon" />
+              <span className="font-medium">Flexible Booking</span>
             </div>
           </div>
         </div>

@@ -27,12 +27,12 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="section-glamongo bg-white">
+    <section className="section-glamongo bg-purple-50/30">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-6 animate-fade-in">
           <h2 className="subheading-glamongo">
-            What Our <span className="text-glamongo-rose">Clients Say</span>
+            What Our <span className="text-glamongo-purple">Clients Say</span>
           </h2>
           <div className="flex justify-center">
             <div className="accent-line" />
@@ -47,7 +47,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={testimonial.id}
-              className="bg-glamongo-blush/20 border-2 border-glamongo-blush/40 rounded-2xl p-8 hover:shadow-rose-lg hover:scale-[1.02] transition-all duration-300"
+              className="bg-white border-2 border-glamongo-purple/30 rounded-2xl p-8 hover:shadow-purple hover:scale-[1.02] transition-all duration-300 hover:border-glamongo-rose"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="space-y-4">
@@ -64,8 +64,8 @@ const Testimonials = () => {
                 </p>
 
                 {/* Author */}
-                <div className="pt-4 border-t border-glamongo-blush/40">
-                  <p className="font-semibold text-glamongo-charcoal font-playfair text-lg">{testimonial.name}</p>
+                <div className="pt-4 border-t border-glamongo-purple/30">
+                  <p className="font-semibold text-glamongo-purple font-playfair text-lg">{testimonial.name}</p>
                   <p className="text-sm text-glamongo-charcoal/60 font-poppins">{testimonial.service}</p>
                 </div>
               </div>

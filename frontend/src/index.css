@@ -2,76 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Glamongo - Blush & Gold Elegance Theme
-   Primary (blush pink): #FADADD
-   Accent (rose gold): #E6B2A6
-   Contrast (charcoal gray): #2B2B2B
-   Soft Base (ivory white): #FFF9F7
-   Highlight (champagne): #F6E2B3
+/* Vibrant Beauty Theme - Sharp & Modern Colors
+   Primary (vibrant hot pink): #FF6B9D
+   Accent (deep pink): #FF1493
+   Contrast (deep navy charcoal): #1A1A2E
+   Base (pure white): #FFFFFF
+   Gold Highlight: #FFD700
+   Purple Accent: #9D4EDD
+   Coral: #FF6F61
+   Mint/Teal: #00D9C0
 */
 
 @layer base {
   :root {
-    /* Glamongo Color System - HSL Format */
-    --background: 10 100% 98.4%;    /* #FFF9F7 - Ivory White */
-    --foreground: 0 0% 16.9%;       /* #2B2B2B - Charcoal Gray */
+    /* Vibrant Color System - HSL Format */
+    --background: 0 0% 100%;        /* #FFFFFF - Pure White */
+    --foreground: 235 26% 14%;      /* #1A1A2E - Deep Navy Charcoal */
 
-    --card: 10 100% 98.4%;
-    --card-foreground: 0 0% 16.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 235 26% 14%;
 
-    --popover: 10 100% 98.4%;
-    --popover-foreground: 0 0% 16.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 235 26% 14%;
 
-    /* Blush Pink Primary */
-    --primary: 350 100% 92.4%;      /* #FADADD - Blush Pink */
-    --primary-foreground: 0 0% 16.9%;
+    /* Vibrant Hot Pink Primary */
+    --primary: 340 100% 71%;        /* #FF6B9D - Hot Pink */
+    --primary-foreground: 0 0% 100%;
 
-    /* Rose Gold Accent */
-    --secondary: 18 52% 78%;        /* #E6B2A6 - Rose Gold */
-    --secondary-foreground: 0 0% 16.9%;
+    /* Deep Pink Accent */
+    --secondary: 328 100% 54%;      /* #FF1493 - Deep Pink */
+    --secondary-foreground: 0 0% 100%;
 
     /* Soft Backgrounds */
-    --muted: 10 100% 98.4%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 0 0% 98%;
+    --muted-foreground: 235 10% 45%;
 
-    /* Champagne Highlights */
-    --accent: 45 82% 83%;           /* #F6E2B3 - Champagne */
-    --accent-foreground: 0 0% 16.9%;
+    /* Purple Highlights */
+    --accent: 277 75% 59%;          /* #9D4EDD - Rich Purple */
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 350 100% 92.4%;       /* Soft blush border */
-    --input: 350 40% 90%;
-    --ring: 45 82% 83%;             /* Champagne ring */
+    --border: 340 100% 90%;         /* Soft pink border */
+    --input: 340 50% 95%;
+    --ring: 277 75% 59%;            /* Purple ring */
 
     --radius: 0.75rem;
     
-    /* Custom Glamongo Variables */
-    --glamongo-blush: #FADADD;
-    --glamongo-rose: #E6B2A6;
-    --glamongo-charcoal: #2B2B2B;
-    --glamongo-ivory: #FFF9F7;
-    --glamongo-champagne: #F6E2B3;
+    /* Custom Vibrant Variables */
+    --glamongo-blush: #FF6B9D;
+    --glamongo-rose: #FF1493;
+    --glamongo-charcoal: #1A1A2E;
+    --glamongo-ivory: #FFFFFF;
+    --glamongo-champagne: #FFD700;
+    --glamongo-purple: #9D4EDD;
+    --glamongo-coral: #FF6F61;
+    --glamongo-mint: #00D9C0;
+    --glamongo-lavender: #C77DFF;
+    --glamongo-sunset: #FF5E78;
     
-    /* Elegant Shadows */
-    --shadow-rose: 0 4px 20px rgba(250, 218, 221, 0.3);
-    --shadow-rose-lg: 0 10px 40px rgba(250, 218, 221, 0.4);
-    --shadow-elegant: 0 8px 32px rgba(43, 43, 43, 0.08);
-    --shadow-glow: 0 0 20px rgba(246, 226, 179, 0.5);
+    /* Vibrant Shadows */
+    --shadow-rose: 0 4px 20px rgba(255, 107, 157, 0.4);
+    --shadow-rose-lg: 0 10px 40px rgba(255, 20, 147, 0.5);
+    --shadow-elegant: 0 8px 32px rgba(26, 26, 46, 0.12);
+    --shadow-glow: 0 0 25px rgba(255, 215, 0, 0.6);
+    --shadow-purple: 0 4px 20px rgba(157, 78, 221, 0.4);
+    --shadow-neon: 0 0 30px rgba(0, 217, 192, 0.5);
     
     /* Smooth Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-glow: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 10 100% 98.4%;
-    --sidebar-foreground: 0 0% 16.9%;
-    --sidebar-primary: 0 0% 16.9%;
-    --sidebar-primary-foreground: 10 100% 98.4%;
-    --sidebar-accent: 350 100% 92.4%;
-    --sidebar-accent-foreground: 0 0% 16.9%;
-    --sidebar-border: 350 40% 90%;
-    --sidebar-ring: 45 82% 83%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 235 26% 14%;
+    --sidebar-primary: 235 26% 14%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 340 100% 71%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 340 50% 95%;
+    --sidebar-ring: 277 75% 59%;
   }
 }
 
@@ -95,23 +105,23 @@
 @layer components {
   /* Glamongo Button Styles */
   .btn-glamongo {
-    @apply bg-glamongo-blush text-glamongo-charcoal font-medium px-8 py-3 rounded-lg;
+    @apply bg-glamongo-blush text-white font-semibold px-8 py-3 rounded-lg;
     @apply transition-all duration-300 ease-in-out;
     @apply shadow-rose hover:shadow-rose-lg;
-    @apply hover:bg-glamongo-champagne hover:scale-105;
+    @apply hover:bg-glamongo-rose hover:scale-105;
   }
 
   .btn-glamongo-secondary {
-    @apply bg-glamongo-rose text-glamongo-charcoal font-medium px-8 py-3 rounded-lg;
+    @apply bg-glamongo-purple text-white font-semibold px-8 py-3 rounded-lg;
     @apply transition-all duration-300 ease-in-out;
-    @apply shadow-rose hover:shadow-elegant;
-    @apply hover:bg-glamongo-champagne;
+    @apply shadow-purple hover:shadow-elegant;
+    @apply hover:bg-glamongo-lavender;
   }
 
   .btn-glamongo-outline {
-    @apply border-2 border-glamongo-blush text-glamongo-charcoal font-medium px-8 py-3 rounded-lg;
+    @apply border-2 border-glamongo-blush text-glamongo-rose font-semibold px-8 py-3 rounded-lg;
     @apply transition-all duration-300 ease-in-out;
-    @apply hover:bg-glamongo-blush hover:shadow-rose;
+    @apply hover:bg-glamongo-blush hover:text-white hover:shadow-rose;
   }
 
   /* Glamongo Card Styles */
@@ -143,6 +153,7 @@
 
   /* Glamongo Accent Line */
   .accent-line {
-    @apply w-24 h-1 bg-gradient-to-r from-glamongo-blush via-glamongo-rose to-glamongo-champagne rounded-full;
+    @apply w-24 h-1 bg-glamongo-purple rounded-full;
+    box-shadow: 0 0 10px rgba(157, 78, 221, 0.5);
   }
 }

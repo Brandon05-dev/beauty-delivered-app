@@ -18,13 +18,18 @@ export default {
         poppins: ['Poppins', 'sans-serif'],
       },
       colors: {
-        // Glamongo Blush & Gold Elegance Palette
+        // Vibrant Beauty Palette - Sharp & Modern
         glamongo: {
-          blush: '#FADADD',      // Primary - blush pink
-          rose: '#E6B2A6',        // Accent - rose gold
-          charcoal: '#2B2B2B',    // Contrast - charcoal gray
-          ivory: '#FFF9F7',       // Soft Base - ivory white
-          champagne: '#F6E2B3',   // Highlight - champagne
+          blush: '#FF6B9D',      // Primary - vibrant hot pink
+          rose: '#FF1493',        // Accent - deep pink/magenta
+          charcoal: '#1A1A2E',    // Contrast - deep navy charcoal
+          ivory: '#FFFFFF',       // Pure white base
+          champagne: '#FFD700',   // Bright gold
+          purple: '#9D4EDD',      // Rich purple accent
+          coral: '#FF6F61',       // Coral accent
+          mint: '#00D9C0',        // Fresh mint/teal
+          lavender: '#C77DFF',    // Soft lavender
+          sunset: '#FF5E78',      // Sunset pink
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -71,10 +76,12 @@ export default {
         },
       },
       boxShadow: {
-        'rose': '0 4px 20px rgba(250, 218, 221, 0.3)',
-        'rose-lg': '0 10px 40px rgba(250, 218, 221, 0.4)',
-        'glow': '0 0 20px rgba(246, 226, 179, 0.5)',
-        'elegant': '0 8px 32px rgba(43, 43, 43, 0.08)',
+        'rose': '0 4px 20px rgba(255, 107, 157, 0.4)',
+        'rose-lg': '0 10px 40px rgba(255, 20, 147, 0.5)',
+        'glow': '0 0 25px rgba(255, 215, 0, 0.6)',
+        'elegant': '0 8px 32px rgba(26, 26, 46, 0.12)',
+        'purple': '0 4px 20px rgba(157, 78, 221, 0.4)',
+        'neon': '0 0 30px rgba(0, 217, 192, 0.5)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -110,10 +117,20 @@ export default {
         },
         "glow": {
           "0%, 100%": {
-            boxShadow: "0 0 20px rgba(246, 226, 179, 0.5)",
+            boxShadow: "0 0 25px rgba(255, 215, 0, 0.6)",
           },
           "50%": {
-            boxShadow: "0 0 30px rgba(246, 226, 179, 0.8)",
+            boxShadow: "0 0 35px rgba(255, 215, 0, 0.9)",
+          },
+        },
+        "pulse-glow": {
+          "0%, 100%": {
+            opacity: "1",
+            boxShadow: "0 0 20px rgba(157, 78, 221, 0.5)",
+          },
+          "50%": {
+            opacity: "0.8",
+            boxShadow: "0 0 30px rgba(157, 78, 221, 0.8)",
           },
         },
       },
@@ -122,6 +139,7 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out",
         "glow": "glow 2s ease-in-out infinite",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
       },
     },
   },

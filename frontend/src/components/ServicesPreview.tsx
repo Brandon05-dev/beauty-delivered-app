@@ -32,13 +32,13 @@ const services = [
 
 const ServicesPreview = () => {
   return (
-    <section className="section-glamongo bg-glamongo-ivory/50">
+    <section className="section-glamongo bg-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-6 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border-2 border-glamongo-blush/40 shadow-rose">
-            <Sparkles className="w-4 h-4 text-glamongo-rose" />
-            <span className="text-sm font-medium text-glamongo-charcoal">Our Services</span>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-glamongo-purple/10 border-2 border-glamongo-purple/40 shadow-purple">
+            <Sparkles className="w-4 h-4 text-glamongo-purple" />
+            <span className="text-sm font-semibold text-glamongo-charcoal">Our Services</span>
           </div>
           <h2 className="subheading-glamongo">
             Beauty Services <span className="text-glamongo-rose">Tailored for You</span>
@@ -56,14 +56,14 @@ const ServicesPreview = () => {
           {services.map((service, index) => (
             <div 
               key={service.id} 
-              className="card-glamongo group"
+              className="card-glamongo group border-2 border-glamongo-purple/20 hover:border-glamongo-rose"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="aspect-[4/3] bg-glamongo-blush/40 relative overflow-hidden rounded-xl mb-4">
-                <div className="absolute inset-0 bg-white/40" />
+                <div className="absolute inset-0 bg-white/50" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full bg-white/80 flex items-center justify-center shadow-rose">
-                    <Sparkles className="w-10 h-10 text-glamongo-rose" />
+                  <div className="w-20 h-20 rounded-full bg-glamongo-purple flex items-center justify-center shadow-purple group-hover:scale-110 transition-transform">
+                    <Sparkles className="w-10 h-10 text-white" />
                   </div>
                 </div>
                 <div className="absolute bottom-4 left-4 right-4">
@@ -74,11 +74,11 @@ const ServicesPreview = () => {
                 <p className="text-glamongo-charcoal/70 font-poppins">{service.description}</p>
                 <div className="flex items-center justify-between text-sm">
                   <div className="flex items-center gap-2 text-glamongo-charcoal/60">
-                    <Clock className="w-4 h-4" />
+                    <Clock className="w-4 h-4 text-glamongo-purple" />
                     <span className="font-poppins">{service.duration}</span>
                   </div>
                   <div className="flex items-center gap-2 font-semibold text-glamongo-rose">
-                    <DollarSign className="w-4 h-4" />
+                    <DollarSign className="w-4 h-4 text-glamongo-rose" />
                     <span className="font-poppins">{service.price}</span>
                   </div>
                 </div>
