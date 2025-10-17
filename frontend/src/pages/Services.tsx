@@ -21,6 +21,7 @@ const services = [
       "Blush, bronzer, and highlighter",
       "Lipstick and setting spray",
     ],
+    image: "/images/services/makeup.png",
   },
   {
     id: 2,
@@ -36,6 +37,7 @@ const services = [
       "Custom nail art designs",
       "Aftercare tips and recommendations",
     ],
+    image: "/images/services/nails.png",
   },
   {
     id: 3,
@@ -51,6 +53,7 @@ const services = [
       "Hairstyling coordination",
       "On-location service and touch-up kit",
     ],
+    image: "/images/services/bridal glam.png",
   },
   {
     id: 4,
@@ -66,6 +69,23 @@ const services = [
       "Statement eyes or lips",
       "Long-lasting setting techniques",
     ],
+    image: "/images/services/special occasion.png",
+  },
+  {
+    id: 5,
+    name: "Hair Services",
+    tagline: "Stunning hairstyles for any event",
+    description: "From elegant updos to beautiful braids, our hair stylists will create the perfect look for you, wherever you are.",
+    duration: "60-120 minutes",
+    price: "From $90",
+    includes: [
+      "Consultation and hair assessment",
+      "Shampoo and conditioning (optional)",
+      "Professional hairstyling (updo, curls, braids, etc.)",
+      "Finishing spray and shine treatment",
+      "On-location service for your convenience",
+    ],
+    image: "/images/services/hair.png",
   },
 ];
 
@@ -105,10 +125,12 @@ const Services = () => {
               >
                 <div className="md:flex">
                   {/* Image */}
-                  <div className="md:w-2/5 aspect-[4/3] md:aspect-auto bg-glamongo-blush/40 flex items-center justify-center">
-                    <div className="w-24 h-24 rounded-full bg-white/90 flex items-center justify-center shadow-rose">
-                      <span className="text-4xl">✨</span>
-                    </div>
+                  <div className="md:w-2/5 aspect-[4/3] md:aspect-auto bg-glamongo-blush/40 flex items-center justify-center overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.name} 
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    />
                   </div>
                   
                   {/* Content */}

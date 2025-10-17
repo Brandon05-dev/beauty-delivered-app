@@ -10,7 +10,7 @@ const services = [
     description: "Natural, flawless looks perfect for any day",
     duration: "60 min",
     price: "From $80",
-    image: "makeup",
+    image: "/images/services/makeup.png",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const services = [
     description: "Manicures, pedicures, and nail art",
     duration: "45-90 min",
     price: "From $50",
-    image: "nails",
+    image: "/images/services/nails.png",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const services = [
     description: "Your perfect wedding day look",
     duration: "2-3 hours",
     price: "From $250",
-    image: "bridal",
+    image: "/images/services/bridal glam.png",
   },
 ];
 
@@ -56,14 +56,14 @@ const ServicesPreview = () => {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="aspect-[4/3] bg-glamongo-blush/40 relative overflow-hidden rounded-xl mb-4">
-                <div className="absolute inset-0 bg-white/50" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full bg-glamongo-purple flex items-center justify-center shadow-purple group-hover:scale-110 transition-transform">
-                    <Sparkles className="w-10 h-10 text-white" />
-                  </div>
-                </div>
+                <img 
+                  src={service.image} 
+                  alt={service.name} 
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-2xl font-playfair font-bold text-glamongo-charcoal">{service.name}</h3>
+                  <h3 className="text-2xl font-playfair font-bold text-white">{service.name}</h3>
                 </div>
               </div>
               <div className="space-y-4">
