@@ -391,7 +391,7 @@ const Booking = () => {
                     type="submit"
                     className="btn-glamongo w-full text-lg py-4"
                   >
-                    Confirm Booking on WhatsApp
+                    Confirm Booking
                   </button>
                   <p className="text-sm text-glamongo-charcoal/60 text-center mt-4 font-poppins">
                     You will be redirected to WhatsApp to send your booking

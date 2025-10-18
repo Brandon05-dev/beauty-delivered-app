@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -6,57 +5,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Loader2 } from "lucide-react";
-import { toast } from "sonner";
+import { MapPin, Phone, Mail } from "lucide-react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { id, value } = e.target;
-    setFormData((prev) => ({ ...prev, [id]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    if (!formData.name || !formData.email || !formData.message) {
-      toast.error("Please fill out all fields.");
-      setIsSubmitting(false);
-      return;
-    }
-
-    try {
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        toast.success("Message sent successfully! We'll get back to you soon.");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        toast.error(result.message || "Failed to send message. Please try again.");
-      }
-    } catch (error) {
-      console.error("Contact form submission error:", error);
-      toast.error("An unexpected error occurred. Please try again later.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -85,28 +36,21 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="bg-white p-8 rounded-2xl shadow-elegant border-2 border-glamongo-blush/30">
               <h2 className="text-3xl font-playfair font-bold text-glamongo-charcoal mb-6">Send a Message</h2>
-              <form className="space-y-6" onSubmit={handleSubmit}>
+              <form className="space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Full Name</Label>
-                  <Input id="name" placeholder="Your Name" value={formData.name} onChange={handleInputChange} disabled={isSubmitting} />
+                  <Input id="name" placeholder="Your Name" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">Email Address</Label>
-                  <Input id="email" type="email" placeholder="your.email@example.com" value={formData.email} onChange={handleInputChange} disabled={isSubmitting} />
+                  <Input id="email" type="email" placeholder="your.email@example.com" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="message">Message</Label>
-                  <Textarea id="message" placeholder="How can we help you?" rows={5} value={formData.message} onChange={handleInputChange} disabled={isSubmitting} />
+                  <Textarea id="message" placeholder="How can we help you?" rows={5} />
                 </div>
-                <Button type="submit" className="btn-glamongo w-full" disabled={isSubmitting}>
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Sending...
-                    </>
-                  ) : (
-                    "Submit"
-                  )}
+                <Button type="submit" className="btn-glamongo w-full">
+                  Submit
                 </Button>
               </form>
             </div>
@@ -120,8 +64,8 @@ const Contact = () => {
                     <MapPin className="w-6 h-6 text-glamongo-rose mt-1" />
                     <div>
                       <h3 className="font-semibold text-glamongo-charcoal">Our Location</h3>
-                      <p className="text-glamongo-charcoal/70">Kasarani, Nairobi, Kenya</p>
-                      <p className="text-sm text-glamongo-charcoal/60">(We are a mobile service and come to you!)</p>
+                      <p className="text-glamongo-charcoal/70">123 Beauty Lane, Glamour City, 12345</p>
+                      <p className="text-sm text-glamongo-charcoal/60">(We are also a mobile service and come to you!)</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -143,7 +87,7 @@ const Contact = () => {
               <div className="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden shadow-elegant border-2 border-glamongo-blush/30">
                 {/* Replace with your actual map embed */}
                 <iframe
-                  src="https://maps.google.com/maps?q=Kasarani,Nairobi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086418232236!2d-122.419415484681!3d37.77492957975904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c39d84d3b%3A0x4de5e3f7d6c8ca46!2sSan%20Francisco%20City%20Hall!5e0!3m2!1sen!2sus!4v1620680999999!5m2!1sen!2sus"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
